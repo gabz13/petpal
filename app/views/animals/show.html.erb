@@ -1,6 +1,11 @@
-<h1><%=Animal.id %></h1>
+<h1><%=@animal.name%></h1>
 
 <div>
+  <%= @animal.name %>
+  <%= @animal.animal_type %>
   <%#= @Animal.picture %>
+  <%= link_to "Delete", animal_path(@animal),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 </div>
 
