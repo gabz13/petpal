@@ -16,6 +16,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
+    @animal.user = current_user
     if @animal.save
       redirect_to animal_path(@animal)
     else
@@ -39,6 +40,6 @@ class AnimalsController < ApplicationController
   end
 
   def set_animal
-    @animals = Animal.find(params[:id])
+    @animal = Animal.find(params[:id])
   end
 end
