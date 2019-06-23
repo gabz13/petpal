@@ -32,8 +32,5 @@ class BookingsController < ApplicationController
 
   def set_animal
     @animal = Animal.find(params[:animal_id])
-
   end
-
-
 end
