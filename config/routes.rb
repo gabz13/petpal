@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :animals do
+    resources :bookings, only: [:new, :create, :destroy]
+  end
+
+  resources :bookings, only: [:index, :show]
+
   root to: 'pages#home'
-  resources :animals
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
