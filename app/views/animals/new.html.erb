@@ -3,7 +3,7 @@
 <%= simple_form_for(@animal) do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :type, collection: Animal::TYPES %>
+    <%= f.input :animal_type, collection: Animal::TYPES %>
     <%= f.input :size, collection: Animal::SIZES %>
     <%= f.input :energy, collection: Animal::ENERGY %>
   </div>
