@@ -2,12 +2,12 @@
 
   <div class="form-color">
   <%= simple_form_for(@animal) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.input :animal_type, collection: Animal::TYPES %>
-      <%= f.input :size, collection: Animal::SIZES %>
-      <%= f.input :energy, collection: Animal::ENERGY %>
-      <%= f.input :photo %>
+      <%= f.input :name, input_html: { class: "animal-input"} %>
+      <%= f.input :description, input_html: { class: "animal-input"} %>
+      <%= f.input :animal_type, collection: Animal::TYPES, input_html: { class: "animal-input"} %>
+      <%= f.input :size, collection: Animal::SIZES, input_html: { class: "animal-input"} %>
+      <%= f.input :energy, collection: Animal::ENERGY, input_html: { class: "animal-input"} %>
+      <%= f.input :photo, input_html: { class: "animal-input"} %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit class: "btn btn-info btn-block form-buttom" %>
 
