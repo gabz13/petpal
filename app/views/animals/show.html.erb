@@ -1,26 +1,28 @@
-<h1><%=@animal.name%></h1>
+<div class="container">
 
-<div>
-  <p><%= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %></p>
-  <p><%= @animal.description %></p>
-  <p><%= @animal.animal_type %></p>
-  <p><%= @animal.size %></p>
-  <p><%= @animal.energy %></p>
+  <h1><%=@animal.name%></h1>
+
+  <div>
+    <p><%= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %></p>
+    <p><strong>Bio: </strong><%= @animal.description %></p>
+    <p><strong>Type of Animal: </strong><%= @animal.animal_type %></p>
+    <p><strong>Size of Animal: </strong><%= @animal.size %></p>
+    <p><strong>Craziness level: </strong><%= @animal.energy %></p>
 
 
-<p> <%= link_to "Book your Pal!", new_animal_booking_path(@animal) %></p>
+  <p> <%= link_to "Book your Pal!", new_animal_booking_path(@animal) %></p>
 
-  <%#= @Animal.picture %>
-  <% if policy(@animal).edit? %>
-    <%= link_to "Edit", edit_animal_path(@animal) %>
-  <% end %>
+    <%#= @Animal.picture %>
+    <% if policy(@animal).edit? %>
+      <%= link_to "Edit", edit_animal_path(@animal) %>
+    <% end %>
 
-  <% if policy(@animal).destroy? %>
-    <%= link_to "Delete", animal_path(@animal),
-    method: :delete,
-    data: { confirm: "Are you sure?" } %>
-  <% end %>
+    <% if policy(@animal).destroy? %>
+      <%= link_to "Delete", animal_path(@animal),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    <% end %>
 
-  <%= link_to "Back", animals_path %>
+    <%= link_to "Back", animals_path %>
+  </div>
 </div>
-
