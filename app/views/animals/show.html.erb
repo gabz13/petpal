@@ -1,6 +1,7 @@
 <h1><%=@animal.name%></h1>
 
 <div>
+  <p><%= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %></p>
   <p><%= @animal.description %></p>
   <p><%= @animal.animal_type %></p>
   <p><%= @animal.size %></p>
