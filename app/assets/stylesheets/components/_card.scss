@@ -16,10 +16,10 @@
     object-fit: cover;
     display: block;
   }
-  h2 {
-    font-size: 16px;
+  h3 {
     font-weight: bold;
     margin: 0;
+    font-family: 'Mali', cursive;
   }
   // a {
   //   font-size: 30px;
@@ -36,6 +36,7 @@
 
 .card-info {
   padding: 8px;
+  background-color: white;
 }
 
 .card-image {
@@ -47,7 +48,7 @@
 .card-button {
   position: absolute;
   right: 10px;
-  bottom: 58px;
+  bottom: 50px;
 }
 
 
