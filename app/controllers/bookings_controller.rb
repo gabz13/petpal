@@ -12,11 +12,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new
+    @booking = Booking.new(bookings_params)
     @booking.animal = @animal
-    @user = User.find(params[:user_id])
+    @booking.user = current_user
     if @booking.save
-      redirect_to bookings_index_path
+      redirect_to bookings_path
     else
       render :new
     end
@@ -32,5 +32,8 @@ class BookingsController < ApplicationController
 
   def set_animal
     @animal = Animal.find(params[:animal_id])
+  end
+  def bookings_params
+    params.require(:booking).permit(:terms_and_conditions)
   end
 end
