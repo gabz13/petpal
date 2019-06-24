@@ -1,7 +1,15 @@
-<body class="home-page">
-  <h1 class="petpal">PetPal</h1>
+<div class="home-page">
 
-</body>
-
+  <div class="search-box">
+    <h1 class="petpal">PetPal</h1>
+    <%= form_tag animals_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+      placeholder: "Search by location"
+      %>
+    <% end %>
+  </div>
+</div>
 
 

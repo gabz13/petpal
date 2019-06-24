@@ -2,11 +2,38 @@
 .home-page {
   background: url(https://images.pexels.com/photos/1766479/pexels-photo-1766479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
   background-size: cover;
-  opacity: 1px;
+  height: 100vh;
+  padding-top: 270px;
 
 }
 
 .petpal {
- font-family: 'Mali', cursive;
+ font-family: 'Fredericka the Great', cursive;
+ color: black;
+ font-style: bold;
+ font-size: 100px;
+   position: center;
+   background-color: rgba(255, 255, 255, 0.5);
+
+
+}
+
+.search-box {
+  text-align: center;
+  opacity: 1;
+  width: 500px;
+  margin: 0 auto;
+
+}
+
+
+.form-control {
+ display: inline-block;
+  width: 60%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Mali', cursive;
+  color: black;
 
 }
