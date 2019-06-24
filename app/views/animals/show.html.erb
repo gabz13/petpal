@@ -1,11 +1,19 @@
 <h1><%=@animal.name%></h1>
 
 <div>
-  <%= @animal.name %>
-  <%= @animal.animal_type %>
+  <p><%= @animal.description %></p>
+  <p><%= @animal.animal_type %></p>
+  <p><%= @animal.size %></p>
+  <p><%= @animal.energy %></p>
+
   <%#= @Animal.picture %>
+
+  <%= link_to "Edit", edit_animal_path(@animal) %> |
+
+  <%= link_to "Back", animals_path %> |
+
   <%= link_to "Delete", animal_path(@animal),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+  method: :delete,
+  data: { confirm: "Are you sure?" } %>
 </div>
 
