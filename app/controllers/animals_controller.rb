@@ -21,7 +21,7 @@ class AnimalsController < ApplicationController
     @animal.user = current_user
     authorize @animal
     if @animal.save
-      redirect_to animal_path(@animal), notice: 'Restaurant was successfully created.'
+      redirect_to animal_path(@animal), notice: 'Animal was successfully created.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class AnimalsController < ApplicationController
 
   def update
     if @animal.update(animal_params)
-      redirect_to @animal, notice: 'Restaurant was successfully updated.'
+      redirect_to @animal, notice: 'Animal was successfully updated.'
     else
       redner :edit
     end
