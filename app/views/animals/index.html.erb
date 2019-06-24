@@ -2,6 +2,7 @@
 
 
 <% @animals.each do |animal| %>
+<p><%= cl_image_tag animal.photo, height: 300, width: 400, crop: :fill %></p>
 <p><%= animal.name %> <%= link_to "More info", animal_path(animal) %> </p>
 <% end %>
 <%#= animal.picture %>

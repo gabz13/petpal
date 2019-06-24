@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :destroy, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @animals = policy_scope(Animal)
+    @animals = policy_scope(Animal).order(created_at: :asc)
   end
 
   def show
@@ -43,7 +43,7 @@ class AnimalsController < ApplicationController
     private
 
     def animal_params
-      params.require(:animal).permit(:name, :description, :size, :energy, :animal_type)
+      params.require(:animal).permit(:name, :description, :size, :energy, :animal_type, :photo)
     end
 
     def set_animal
