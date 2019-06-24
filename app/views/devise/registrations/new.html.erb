@@ -18,6 +18,8 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :description %>
+    <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">
@@ -26,3 +28,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
