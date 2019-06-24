@@ -1,2 +1,8 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<h1>Your Bookings</h1>
+
+<% @bookings.each do |booking| %>
+<ol>
+<li>Congratulations, <%= current_user.first_name %> You have booked <%= booking.animal.name %>. You will meet your petpal on July 30th, 2019</li>
+</ol>
+<% end %>
+

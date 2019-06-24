@@ -1,2 +1,17 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Confirm Your Pal <i class="fas fa-paw"></i></h1>
+
+<div>
+<h4>Thanks for booking with us, <%= current_user.first_name %></h4>
+<h5>Name: <%= @animal.name %></h5>
+<p> Type: <%= @animal.animal_type.capitalize %></p>
+<p> Size: <%= @animal.size.capitalize %></p>
+<p>Energy Level: <%= @animal.energy.capitalize %></p>
+</div>
+
+
+<%= simple_form_for([@animal, @booking]) do |f| %>
+<%= f.input :terms_and_conditions %>
+<%= f.button :submit %>
+<% end %>
+
+<form action="/animal/2/booking" method="post"></form>
