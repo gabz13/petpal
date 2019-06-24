@@ -31,7 +31,7 @@ class AnimalsController < ApplicationController
     if @animal.update(animal_params)
       redirect_to @animal, notice: 'Animal was successfully updated.'
     else
-      redner :edit
+      render :edit
     end
   end
 
