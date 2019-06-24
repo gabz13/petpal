@@ -1,5 +1,14 @@
-<h1>Add a new animal</h1>
+<div class="form-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-xs-12">
+        <h1>Add your Pal</h1>
+        <%= render 'form', animal: @animal %>
+          <div class="form-color">
+        <%= link_to "Back", animals_path, class: "btn btn-outline-info btn-block form-button "  %>
+      </div>
+    </div>
 
-<%= render 'form', animal: @animal %>
-
-<%= link_to "Back", animals_path  %>
+  </div>
+</div>
+</div>

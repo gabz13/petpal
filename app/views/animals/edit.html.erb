@@ -1,5 +1,14 @@
-<h1>Edit <%= @animal.name %></h1>
+<div class="form-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-xs-12">
+        <h1>Edit <%= @animal.name %></h1>
 
-<%= render 'form', animal: @animal %>
-
-<%= link_to "Back", animal_path(@animal) %>
+        <%= render 'form', animal: @animal %>
+        <div class="form-color">
+          <%= link_to "Back", animal_path(@animal) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
