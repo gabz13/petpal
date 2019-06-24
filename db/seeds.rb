@@ -10,25 +10,13 @@ users_attributes = [
     last_name:  'Simon',
     email:  'gab@petpal.com',
     password:        '123456'
-  },
-  {
-    first_name:   'Mel',
-    last_name:  'Weinstein',
-    email:  'mel@petpal.com',
-    password:        '123456'
-  },
-  {
-    first_name:   'Daria',
-    last_name:  'Makarova',
-    email:  'daria@petpal.com',
-    password:        '123456'
   }
 ]
 gab = User.create!(users_attributes[0])
-mel = User.create!(users_attributes[1])
-dar = User.create!(users_attributes[2])
+
 puts 'Finished!'
 
+url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
 
 
 puts 'Creating animals...'
@@ -39,9 +27,8 @@ animals_attributes = [
     description:  'really cute dog',
     size:        'small',
     energy:       'low',
-    user_id:        gab.id
-
-
+    user:        gab,
+    remote_photo_url:        url
   },
   {
     name:         'Milo',
@@ -49,7 +36,8 @@ animals_attributes = [
     description:  'really cute dog',
     size:        'medium',
     energy:        'low',
-    user_id:        mel.id
+    user:        gab,
+    remote_photo_url:        url
   },
   {
     name:         'Harley',
@@ -57,7 +45,8 @@ animals_attributes = [
     description:  'really cute dog',
     size:        'small',
     energy:        'low',
-    user_id:        dar.id
+    user:        gab,
+    remote_photo_url:        url
   }
 ]
 Animal.create!(animals_attributes)

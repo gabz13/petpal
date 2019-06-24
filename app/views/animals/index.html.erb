@@ -1,9 +1,11 @@
 <h1>Animals</h1>
 
-<div class="card">
-<%= @animals.each do |animal| %>
-<%= animal.name %>
+
+<% @animals.each do |animal| %>
+<p><%= cl_image_tag animal.photo, height: 300, width: 400, crop: :fill %></p>
+<p><%= animal.name %> <%= link_to "More info", animal_path(animal) %> </p>
+<% end %>
 <%#= animal.picture %>
-</div>
 
 
+<%= link_to "Add a Pal", new_animal_path %>

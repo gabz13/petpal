@@ -1,2 +1,5 @@
-<h1>Animals#edit</h1>
+<h1>Edit <%= @animal.name %></h1>
 
+<%= render 'form', animal: @animal %>
+
+<%= link_to "Back", animal_path(@animal) %>

@@ -1,13 +1,5 @@
 <h1>Add a new animal</h1>
-  <div>
-<%= simple_form_for(@animal) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :animal_type, collection: Animal::TYPES %>
-    <%= f.input :size, collection: Animal::SIZES %>
-    <%= f.input :energy, collection: Animal::ENERGY %>
-    <%= f.submit class: "btn btn-outline-success btn-block" %>
-  </div>
-<% end %>
 
+<%= render 'form', animal: @animal %>
 
+<%= link_to "Back", animals_path  %>
