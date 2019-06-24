@@ -1,12 +1,16 @@
-<h1>Your Bookings</h1>
+
+<div class="book-back">
+<h1 class="booking-header">Your Bookings</h1>
 
 <% @bookings.each do |booking| %>
 <ol>
-<li>Congratulations, <%= current_user.first_name %> You have booked <%= booking.animal.name %>. You will meet your petpal on July 30th, 2019</li>
+<li></i> Congratulations, <%= current_user.first_name %>! You have booked <%= booking.animal.name %>.
+<p>You will meet your petpal on July 30th, 2019</p></li>
 
 <%= link_to "Delete Booking", booking_path(booking),
     method: :delete,
     data: { confirm: "Are you sure?" } %>
 </ol>
 <% end %>
+</div>
 
