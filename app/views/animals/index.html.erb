@@ -1,11 +1,27 @@
 <h1>Animals</h1>
 
-
-<% @animals.each do |animal| %>
-<p><%= cl_image_tag animal.photo, height: 300, width: 400, crop: :fill %></p>
-<p><%= animal.name %> <%= link_to "More info", animal_path(animal) %> </p>
-<% end %>
-<%#= animal.picture %>
-
-
 <%= link_to "Add a Pal", new_animal_path %>
+
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <!-- <div class="d-flex justify-content-between"> -->
+      <% @animals.each do |animal| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-animal mt-3">
+          <div class="card-image">
+            <%= cl_image_tag animal.photo, height: 200, crop: :fit%>
+          </div>
+          <div class="card-info">
+            <h3><%= animal.name %></h3>
+            <p><%= animal.description %></p>
+            <div class="card-button">
+              <%= link_to "Meet your Pal", animal_path(animal), class: "btn btn-outline-info btn-sm" %>
+            </div>
+          </div>
+          <!-- <img src="https://images.pexels.com/photos/1232152/pexels-photo-1232152.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"> -->
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

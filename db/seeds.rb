@@ -17,7 +17,7 @@ gab = User.create!(users_attributes[0])
 
 puts 'Finished!'
 
-url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
+url = "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjUyL7_i4LjAhVdAmMBHS2dAaQQjRx6BAgBEAU&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fcute%2520dog%2F&psig=AOvVaw2Blk373LKGrCA1iIqV6SNE&ust=1561464850235584.png"
 
 
 puts 'Creating animals...'

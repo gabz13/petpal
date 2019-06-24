@@ -1,0 +1,75 @@
+.card-animal {
+  overflow: hidden;
+  grid-gap: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  background: cover;
+  background-position: center;
+  position: relative;
+  z-index: 200;
+  justify-content: around;
+  position: relative;
+
+  img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  // a {
+  //   font-size: 30px;
+  //   font-family: 'Courgette', cursive;
+  //   color: white;
+  //   opacity: 1.2;
+  //   margin: 0;
+  //   position: absolute;
+  //   bottom: 19px;
+  //   left: 23px;
+  //   text-decoration: none;
+  // }
+}
+
+.card-info {
+  padding: 8px;
+}
+
+.card-image {
+  object-fit: cover;
+  display: block;
+}
+
+
+.card-button {
+  position: absolute;
+  right: 10px;
+  bottom: 58px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
