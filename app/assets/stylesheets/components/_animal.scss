@@ -1,0 +1,51 @@
+.animal-photo {
+  // box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  background: cover;
+  background-position: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  // flex-grow: 1;
+  justify-content: between;
+}
+
+.animal-edit {
+  flex-grow: 1;
+  align-items: center;
+}
+
+.animal-info {
+  flex-grow: 2;
+  min-width: 400px;
+  background-color: rgba(255,255,255,0.1);
+  width: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
+  height: 300px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 19px;
+  p {
+    margin: 20px;
+  }
+}
+
+.animal-list {
+  text-align: center;
+}
+
+.animal-desc {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#animal-header {
+  text-align: left;
+  margin-left: 135px;
+  padding-top: 15px;
+}
+
+.animal-changes {
+  display: flex;
+  display: block;
+  text-align: center;
+}

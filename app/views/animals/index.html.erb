@@ -13,7 +13,7 @@
           </div>
           <div class="card-info">
             <h3><%= animal.name %></h3>
-            <p><%= animal.description %></p>
+            <p><%= animal.description.truncate_words(5) %></p>
             <div class="card-button">
               <%= link_to "Meet your Pal", animal_path(animal), class: "btn btn-outline-info btn-sm" %>
             </div>
