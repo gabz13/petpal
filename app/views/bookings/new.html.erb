@@ -1,18 +1,26 @@
-<h1>Confirm Your Pal <i class="fas fa-paw"></i></h1>
+<div class="background-confirm">
+  <div class="container">
+    <div class="background-info">
+    <h1 class="booking-header">Confirm Your Pal <i class="fas fa-paw"></i></h1>
 
-<div>
-<h4>Thanks for booking with us, <%= current_user.first_name %></h4>
-<h5>Name: <%= @animal.name %></h5>
-<p> Type: <%= @animal.animal_type.capitalize %></p>
-<p> Size: <%= @animal.size.capitalize %></p>
-<p>Energy Level: <%= @animal.energy.capitalize %></p>
+    <div class="booking-words">
+      <h4>Thanks for booking with us, <%= current_user.first_name %></h4>
+      <h5>Here are the details below:</h5>
+      <h6>Pal Name: <%= @animal.name %></h6>
+      <p>Animal Type: <%= @animal.animal_type.capitalize %></p>
+      <p>Size of your animal: <%= @animal.size.capitalize %></p>
+      <p>Energy Level: <%= @animal.energy.capitalize %></p>
+    </div>
+
+
+    <%= simple_form_for([@animal, @booking]) do |f| %>
+    <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
+    <%= f.button :submit, class: "btn btn-info btn-md" %>
+    <% end %>
+
+    <%= link_to "Back", animal_path(@animal), class: "btn btn-outline-info btn-sm my-3"  %>
+     </div>
+  </div>
 </div>
-
-
-<%= simple_form_for([@animal, @booking]) do |f| %>
-<%= f.input :terms_and_conditions %>
-<%= f.button :submit %>
-<% end %>
-
 <!-- <form action="/animal/2/booking" method="post"></form>
- -->
+-->
