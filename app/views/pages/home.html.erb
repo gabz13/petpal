@@ -2,14 +2,14 @@
 
   <div class="search-box">
     <h1 class="petpal">PetPal</h1>
-    <%= form_tag animals_path, method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-search",
-      placeholder: "Search by location"
-      %>
-    <% end %>
+    <%= link_to "Find me a Pal", animal_path(@animal), class: "form-search btn btn-outline-dark" %>
   </div>
 </div>
 
 
+<%#= form_tag animals_path, method: :get do %>
+<%#= text_field_tag :query,
+params[:query],
+class: "form-search",
+  placeholder: "Search by location"%>
+  <%# end %>
