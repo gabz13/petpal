@@ -2,9 +2,9 @@ class Animal < ApplicationRecord
   belongs_to :user
   mount_uploader :photo, PhotoUploader
 
-  TYPES = ["dog", "cat", "turtle", "bird", "iguana", "hamster", "horse"].freeze
-  SIZES = ["small", "medium", "big", "extra-big"].freeze
-  ENERGY = ["low", "medium", "high", "hyper-active"].freeze
+  TYPES = ["Dog", "Cat", "Turtle", "Bird", "Iguana", "Hamster", "Horse", "Pig"].freeze
+  SIZES = ["Small", "Medium", "Big", "Extra-Big"].freeze
+  ENERGY = ["Low", "Medium", "High", "Hyper-Active"].freeze
 
   validates :animal_type, inclusion: { in: TYPES }, presence: true
   validates :size, inclusion: { in: SIZES }, presence: true
