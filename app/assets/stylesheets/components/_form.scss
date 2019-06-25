@@ -63,13 +63,13 @@
 
 .form-signup {
   background-image: url("https://images.unsplash.com/photo-1511914265872-c40672604a80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
-  height: 100vh;
+  height: calc(140vh - 69px - 70px);
 }
 
 
 .form-signin {
   background-image: url("https://images.unsplash.com/photo-1541689221361-ad95003448dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
-  height: 100vh;
+  height: calc(100vh - 69px - 70px);
 }
 
 
