@@ -8,12 +8,12 @@
   }
 }
 
-.form-info {
-  width: 400px;
-  margin-right: 10px;
-  margin-left: 100px;
+// .form-info {
+//   width: 400px;
+//   margin-right: 10px;
+//   margin-left: 100px;
 
-}
+// }
 
 .form-button {
   padding: 5px;
@@ -29,3 +29,36 @@
   background-color: #E0D1C8;
   border-bottom: 1px solid #2F7975;
 }
+
+.edit-back {
+  h2 {
+    margin-right: 10px;
+    margin-left: 100px;
+    display: flex;
+    font-family: 'Mali', cursive;
+     padding-bottom: 10px;
+     padding-top: 10px;
+  }
+}
+
+.edit-input {
+  background-color: #019EC4;
+  border-bottom: 1px solid #2F7975;
+  border-top: #019ec4;
+  border-left: #019ec4;
+  border-right: #019ec4;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.edit-form {
+  margin-right: 150px;
+
+}
+
+.edit-form-color {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  // opacity: 0.4;
+}
+
+
