@@ -17,7 +17,7 @@ gab = User.create!(users_attributes[0])
 
 puts 'Finished!'
 
-url = "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjUyL7_i4LjAhVdAmMBHS2dAaQQjRx6BAgBEAU&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fcute%2520dog%2F&psig=AOvVaw2Blk373LKGrCA1iIqV6SNE&ust=1561464850235584.png"
+url = "https://cdn1-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg"
 
 
 puts 'Creating animals...'
