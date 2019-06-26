@@ -76,6 +76,12 @@
 .info-card {
   height: 80px;
   width: 200px;
+  p {
+    font-weight: bold;
+    position: absolute;
+    bottom: -5px;
+    left: 35px;
+  }
 }
 
 
@@ -90,6 +96,8 @@
   position: relative;
   border-radius: 5px;
   font-family: 'Raleway', sans-serif;
+  border: 1px solid #C9C7CA;
+  position: relative;
   img {
     height: 170px;
     width: 190px;
@@ -101,6 +109,19 @@
   position: absolute;
   bottom: 2px;
   font-family: 'Raleway', sans-serif;
+
+  a {
+    color: white;
+    background-color: #d3c2be;
+    text-decoration: none;
+    border: 1px solid #C9C7CA;
+    padding: 2px;
+    position: absolute;
+    bottom: 5px;
+    left: 95px;
+    width: 85px;
+    height: 25px;
+  }
 }
 
 
