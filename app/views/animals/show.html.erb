@@ -9,28 +9,39 @@
         </div>
         <div class="animal-info">
           <ul class="animal-list"><strong>Get to know me:</strong></ul>
-            <p class="animal-desc"><%= @animal.description %></p>
+          <p class="animal-desc"><%= @animal.description %></p>
           <p><strong>Type of Animal: </strong><%= @animal.animal_type %></p>
           <p><strong>Size of Animal: </strong><%= @animal.size %></p>
           <p><strong>Craziness level: </strong><%= @animal.energy %></p>
-        </div>
-
-        <div class="animal-edit">
-          <p> <%= link_to "Book your Pal!", new_animal_booking_path(@animal), class: "btn btn-info btn-md btn-block" %></p>
-        <div class="animal-changes">
-          <%#= @Animal.picture %>
+          <div class="d-flex justify-content-start ml-2">
+            <div class="p-2">
           <% if policy(@animal).edit? %>
           <%= link_to "Edit", edit_animal_path(@animal), class: "btn btn-outline-info" %>
           <% end %>
-
+          </div>
+          <div class="mr-auto p-2">
           <% if policy(@animal).destroy? %>
           <%= link_to "Delete", animal_path(@animal),
           method: :delete,
           data: { confirm: "Are you sure?" }, class: "btn btn-outline-info" %>
-          <% end %>
           </div>
+          <% end %>
         </div>
-      <!-- </div> -->
+        </div>
+
+        <div class="animal-edit">
+          <br>
+          <%= form_tag new_animal_booking_path(@animal), method: :get do  %>
+          <div class="white-box">
+           <p><%= text_field_tag :start_date, params[:start_date], as: :string, required: false, class: "datepicker", id: "start_input", placeholder: "Pick-up" %>  <i class="fas fa-arrow-right"></i>  <%= text_field_tag :end_date, params[:start_date], as: :string, required: false, class: "datepicker", placeholder: "Drop-off", id: "start_input" %></p>
+         </div>
+
+         <p><%= button_tag  "Book your Pal!", class: "btn btn-info btn-md btn-block" %></p>
+         <% end %>
+
+      </div>
     </div>
   </div>
+</div>
+
 </div>
