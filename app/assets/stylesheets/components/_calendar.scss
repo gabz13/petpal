@@ -1,0 +1,27 @@
+.flatpickr-current-month  {
+font-size: 16px !important;
+color: #3A958F !important;
+}
+
+
+.flatpickr-monthDropdown-months {
+  height: 28px !important;
+}
+
+
+.cur-year {
+font-size: 16px !important;
+
+}
+
+.flatpickr-day.today:hover,
+.flatpickr-day.today:focus {
+  border-color: #3A958F !important;
+  background:#3A958F !important;
+  color: #fff;
+}
+span.flatpickr-day.today:not(.selected),
+span.flatpickr-day.prevMonthDay.today:not(.selected),
+span.flatpickr-day.nextMonthDay.today:not(.selected) {
+  border-bottom-color: #3A958F !important;
+}

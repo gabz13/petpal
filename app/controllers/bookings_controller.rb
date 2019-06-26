@@ -39,6 +39,6 @@ class BookingsController < ApplicationController
     authorize @animal
   end
   def bookings_params
-    params.require(:booking).permit(:terms_and_conditions)
+    params.require(:booking).permit(:terms_and_conditions, :start_date, :end_date)
   end
 end
