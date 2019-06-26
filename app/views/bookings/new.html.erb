@@ -10,11 +10,14 @@
       <p>Animal Type: <%= @animal.animal_type.capitalize %></p>
       <p>Size of your animal: <%= @animal.size.capitalize %></p>
       <p>Energy Level: <%= @animal.energy.capitalize %></p>
+      <p>Dates: <%= params[:start_date] %> to <%= params[:end_date] %></p>
     </div>
 
 
     <%= simple_form_for([@animal, @booking]) do |f| %>
-    <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
+    <%#= f.input :start_date, as: :string,    placeholder: params[:start_date], required: false, input_html: {class: "datepicker"} %>
+      <%#= f.input :end_date, as: :string, placeholder: params[:end_date], required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
     <%= f.button :submit, class: "btn btn-info btn-md" %>
     <% end %>
 
