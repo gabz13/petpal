@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_animal, only: [:new, :show, :create]
 
   def index
-    @bookings = policy_scope(Booking)
+    @bookings = policy_scope(Booking).where(user: current_user)
   end
 
   def show

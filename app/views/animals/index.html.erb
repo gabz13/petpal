@@ -1,28 +1,22 @@
 <div class="background-index">
+  <div class="map-layout d-flex">
 
-<%= link_to "Add a Pal", new_animal_path, class: "btn btn-info btn-md my-3 ml-2"  %>
 
 <div class="container-index">
-  <div class="row mt-5 mb-5">
+<%# link_to "Add a Pal", new_animal_path, class: "btn btn-info btn-md my-3 ml-2"  %>
+  <div class="row mt-5 mb-5" id="card">
     <!-- <div class="d-flex justify-content-between"> -->
       <% @animals.each do |animal| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-animal mt-3">
-          <div class="card-image">
-            <%= cl_image_tag animal.photo, height: 200, crop: :fit%>
-          </div>
-          <div class="card-info">
-            <h3><%= animal.name %></h3>
-            <p><%= animal.description.truncate_words(5) %></p>
-            <div class="card-button">
-              <%= link_to "Meet your Pal", animal_path(animal), class: "btn btn-outline-info btn-sm" %>
-            </div>
-          </div>
-          <!-- <img src="https://images.pexels.com/photos/1232152/pexels-photo-1232152.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"> -->
-        </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render partial: 'card', locals: { animal: animal } %>
       </div>
       <% end %>
     </div>
   </div>
+  <div
+  id="map"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
 </div>
 </div>

@@ -1,0 +1,7 @@
+<div class="info-card">
+    <%= cl_image_tag animal.photo %>
+    <p><%= animal.name.truncate(10) %></p>
+    <div class="info-button">
+      <%= link_to "Meet your Pal", animal_path(animal) %>
+    </div>
+</div>

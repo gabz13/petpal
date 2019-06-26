@@ -24,30 +24,39 @@ puts 'Creating animals...'
 animals_attributes = [
   {
     name:         'Timo',
-    animal_type:  'dog',
+    animal_type:  'Dog',
     description:  'really cute dog',
-    size:        'small',
-    energy:       'low',
+    size:        'Small',
+    energy:       'Low',
     user:        gab,
-    remote_photo_url:        url
+    remote_photo_url:        url,
+    location:      'Tel Aviv',
+    latitude:      32.0853,
+    longitude:     34.7818
   },
   {
     name:         'Milo',
-    animal_type:  'dog',
+    animal_type:  'Dog',
     description:  'really cute dog',
-    size:        'medium',
-    energy:        'low',
+    size:        'Medium',
+    energy:        'Low',
     user:        gab,
-    remote_photo_url:        url
+    remote_photo_url:        url,
+    location:      'Haifa',
+    latitude:      32.7940,
+    longitude:     34.9896
   },
   {
     name:         'Harley',
-    animal_type:  'dog',
+    animal_type:  'Dog',
     description:  'really cute dog',
-    size:        'small',
-    energy:        'low',
+    size:        'Small',
+    energy:        'Low',
     user:        gab,
-    remote_photo_url:        url
+    remote_photo_url:        url,
+    location:      'North Tel Aviv',
+    latitude:      32.0902,
+    longitude:     34.7750
   }
 ]
 Animal.create!(animals_attributes)
