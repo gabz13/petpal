@@ -1,0 +1,13 @@
+<div class="card-animal mt-3">
+          <div class="card-image">
+            <%= cl_image_tag animal.photo, height: 200, crop: :fit%>
+          </div>
+          <div class="card-info">
+            <h3><%= animal.name.truncate(10) %></h3>
+            <p><%= animal.description.truncate_words(5) %></p>
+            <div class="card-button">
+              <%= link_to "Meet your Pal", animal_path(animal), class: "btn btn-outline-info btn-sm" %>
+            </div>
+          </div>
+          <!-- <img src="https://images.pexels.com/photos/1232152/pexels-photo-1232152.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"> -->
+        </div>

@@ -2,6 +2,9 @@ class Animal < ApplicationRecord
   belongs_to :user
   mount_uploader :photo, PhotoUploader
 
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
   TYPES = ["Dog", "Cat", "Turtle", "Bird", "Iguana", "Hamster", "Horse", "Pig"].freeze
   SIZES = ["Small", "Medium", "Big", "Extra-Big"].freeze
   ENERGY = ["Low", "Medium", "High", "Hyper-Active"].freeze

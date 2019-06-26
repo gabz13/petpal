@@ -4,6 +4,7 @@
   <%= simple_form_for(@animal) do |f| %>
       <%= f.input :name, input_html: { class: "animal-input"} %>
       <%= f.input :description, input_html: { class: "animal-input"} %>
+      <%= f.input :location, input_html: { class: "animal-input"} %>
       <%= f.input :animal_type, collection: Animal::TYPES, input_html: { class: "animal-input"} %>
       <%= f.input :size, collection: Animal::SIZES, input_html: { class: "animal-input"} %>
       <%= f.input :energy, collection: Animal::ENERGY, input_html: { class: "animal-input"} %>

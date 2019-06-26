@@ -21,6 +21,7 @@
   height: 70px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  flex-shrink: 0;
 }
 .footer-links {
   display: flex;
@@ -45,3 +46,18 @@
   font-size: 20px;
   color: black;
 }
+
+.content {
+  flex-shrink: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+

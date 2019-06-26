@@ -2,7 +2,16 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :destroy, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @animals = policy_scope(Animal).order(created_at: :asc)
+    @animals = policy_scope(Animal).order(created_at: :asc).where.not(latitude: nil, longitude: nil)
+
+    @markers = @animals.map do |animal|
+      {
+        lat: animal.latitude,
+        lng: animal.longitude,
+        infoWindow: render_to_string(partial: "infocard", locals: { animal: animal }),
+        image_url: helpers.asset_url('paw.jpg')
+      }
+    end
   end
 
   def show
@@ -43,7 +52,7 @@ class AnimalsController < ApplicationController
     private
 
     def animal_params
-      params.require(:animal).permit(:name, :description, :size, :energy, :animal_type, :photo)
+      params.require(:animal).permit(:name, :description, :size, :energy, :animal_type, :photo, :location)
     end
 
     def set_animal
