@@ -47,7 +47,7 @@
   border-top: #019ec4;
   border-left: #019ec4;
   border-right: #019ec4;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 .edit-form {
@@ -56,14 +56,15 @@
 }
 
 .edit-form-color {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   // opacity: 0.4;
 }
 
 .form-signup {
   background-image: url("https://images.unsplash.com/photo-1511914265872-c40672604a80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
-  height: calc(140vh - 69px - 70px);
+  height: 130vh;
+
 }
 
 
