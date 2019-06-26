@@ -1,37 +1,57 @@
 .confirmation-box {
   overflow: hidden;
-  height: 150px;
+  height: 130px;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  align-items: left;
+  // width: 50%;
+  // margin-left: 20px;
+  border-radius: 5px;
+ margin-bottom: 20px;
 }
 
 .confirmation-box img {
-  height: 100%;
-  width: 160px;
+  height: 80%;
+  width: 140px;
   object-fit: cover;
+  margin-top: 15px;
+  padding-bottom: 5px;
 }
 
 .confirmation-box h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+
 }
 
 .confirmation-box p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
   margin-top: 8px;
 }
 
 .confirmation-box .main-text {
-  padding: 16px;
+  padding: 10px;
 }
 
 
+
+
+// .main-text{
+//   padding: 5px;
+//   width: 200px;
+//   height: 150px;
+//   margin-top: 10px;
+
+//   line-height: 150px;
+//   color: white;
+//   font-weight: bold;
+//   font-size: 3em;
+//   text-align: center;
+// }
 // .confirmation-box {
 // margin-left: 40px;
 // margin-top: 20px;
