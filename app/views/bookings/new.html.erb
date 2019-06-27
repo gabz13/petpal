@@ -1,27 +1,26 @@
 <div class="background-confirm">
   <div class="container">
     <div class="background-info">
-    <h1 class="booking-header">Confirm Your Pal <i class="fas fa-paw"></i></h1>
-
-    <div class="booking-words">
-      <h4>Thanks for booking with us, <%= current_user.first_name %></h4>
-      <h5>Here are the details below:</h5>
-      <h6>You will hang out with <%= @animal.name %></h6>
-      <p>Who is a <%= @animal.size %> <%= @animal.animal_type %></p>
-      <p>And has the energy level <%= @animal.energy.capitalize %></p>
-      <p>You get to hang out with your pal from <%= params[:start_date] %> to <%= params[:end_date] %></p>
-    </div>
+      <h1 class="booking-header">Thanks for booking with us <%= current_user.first_name %>! </h1>
+      <i class="fas fa-paw" style="font-size: 50px"></i>
+      <div class="booking-words">
+        <h3>You will be hanging out with <%= @animal.name.downcase %>, who is a <%= @animal.size.downcase %> <%= @animal.animal_type.downcase %> and has the energy level <%= @animal.energy.downcase %></h3>
+        <br>
+        <h3>You get to hang out with your pal from <%= params[:start_date] %> to <%= params[:end_date] %></h3>
+        <br>
+      </div>
 
 
-    <%= simple_form_for([@animal, @booking]) do |f| %>
-    <%#= f.input :start_date, as: :string,    placeholder: params[:start_date], required: false, input_html: {class: "datepicker"} %>
+      <%= simple_form_for([@animal, @booking]) do |f| %>
+      <%#= f.input :start_date, as: :string,    placeholder: params[:start_date], required: false, input_html: {class: "datepicker"} %>
       <%#= f.input :end_date, as: :string, placeholder: params[:end_date], required: false, input_html: {class: "datepicker"} %>
-      <strong> <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
-    <%= f.button :submit, class: "btn btn-info btn-md" %>
-    <% end %>
-    </strong>
-    <%= link_to "Back", animal_path(@animal), class: "btn btn-outline-info btn-sm my-3"  %>
-     </div>
+
+       <h4> <strong> <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
+          <%= f.button :submit, class: "btn btn-info btn-lg"%>
+          <% end %></h4>
+
+      <%= link_to "Back", animal_path(@animal), class: "btn btn-outline-info btn-md my-3"  %>
+    </div>
   </div>
 </div>
 <!-- <form action="/animal/2/booking" method="post"></form>

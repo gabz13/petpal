@@ -17,13 +17,13 @@
 
   </head>
   <body>
-    <div class="content">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-</div>
     <div class="footer">
   <div class="footer-links">
     <!-- <a href="#"><i class="fab fa-github"></i></a> -->
