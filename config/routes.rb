@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :animals do
     resources :bookings, only: [:new, :create]
+    resources :reviews, only: [:index, :create]
   end
 
   resources :bookings, only: [:index, :show, :destroy]

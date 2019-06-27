@@ -4,4 +4,6 @@ class Booking < ApplicationRecord
 
   validates :terms_and_conditions, acceptance: true
 
+  validates :location, presence: true
+
 end
