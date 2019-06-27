@@ -68,6 +68,7 @@
         <%= form.input :rating, collection: (1..5).to_a, as: :select, label: 'Rate your Pal:' %>
         <br>
         <%= form.input :content, as: :text, class: "content-review", label: 'Tell us about your experience:' %>
+
         <%= form.button :submit, class: "btn btn-info btn-md btn-block" %>
         <% end %>
       </div>
