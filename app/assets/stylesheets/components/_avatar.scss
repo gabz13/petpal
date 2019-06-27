@@ -35,7 +35,8 @@
 #new_review {
 width: 400px;
 height: 400px ;
-  // flex-grow: 3;
+text-align: center;
+align-content: center;
 }
 
 
@@ -60,14 +61,12 @@ justify-content: center;
 
 
 }
-.stars a {
-    content: "\2605";
-    color: #e67e22;
-}
+
 
 .form-control-label {
   font-size: 19px;
 }
+
 
 .br-theme-css-stars {
   .br-widget {
@@ -83,9 +82,23 @@ justify-content: center;
   }
 }
 
+
+
+textarea.form-control {
+    height: 125px;
+    border-radius: 5px;
+
+}
+
+
+.review_rating {
+  display: inline-block;
+}
+
 .br-widget {
   align-content: center;
 }
+
 
 
 
