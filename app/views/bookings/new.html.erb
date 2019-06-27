@@ -6,21 +6,20 @@
     <div class="booking-words">
       <h4>Thanks for booking with us, <%= current_user.first_name %></h4>
       <h5>Here are the details below:</h5>
-      <h6>Pal Name: <%= @animal.name %></h6>
-      <p>Animal Type: <%= @animal.animal_type.capitalize %></p>
-      <p>Size of your animal: <%= @animal.size.capitalize %></p>
-      <p>Energy Level: <%= @animal.energy.capitalize %></p>
-      <p>Dates: <%= params[:start_date] %> to <%= params[:end_date] %></p>
+      <h6>You will hang out with <%= @animal.name %></h6>
+      <p>Who is a <%= @animal.size %> <%= @animal.animal_type %></p>
+      <p>And has the energy level <%= @animal.energy.capitalize %></p>
+      <p>You get to hang out with your pal from <%= params[:start_date] %> to <%= params[:end_date] %></p>
     </div>
 
 
     <%= simple_form_for([@animal, @booking]) do |f| %>
     <%#= f.input :start_date, as: :string,    placeholder: params[:start_date], required: false, input_html: {class: "datepicker"} %>
       <%#= f.input :end_date, as: :string, placeholder: params[:end_date], required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
+      <strong> <%= f.input :terms_and_conditions, :label => "I agree to treat this animal respectfully"  %>
     <%= f.button :submit, class: "btn btn-info btn-md" %>
     <% end %>
-
+    </strong>
     <%= link_to "Back", animal_path(@animal), class: "btn btn-outline-info btn-sm my-3"  %>
      </div>
   </div>

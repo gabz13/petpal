@@ -2,19 +2,31 @@
   <div class="map-layout d-flex">
 
 
-<div class="container-index">
-  <div class="search-form d-flex justify-content-around mr-2">
-  <%= form_tag animals_path, method: :get, class: "form-inline" do %>
+<div class="container">
+  <div class="search-form d-flex justify-content-around mr-2 mt-3">
+  <%= form_tag animals_path, method: :get, class: "form-row" do %>
 
-  <%= select_tag :animal_type, options_for_select(Animal::TYPES), options: {value:  params[:animal_type]},
-  class: "form-control" %>
-  <%= select_tag :size,  options_for_select(Animal::SIZES),
-  class: "form-control" %>
-  <%= select_tag :energy,  options_for_select(Animal::ENERGY),
-  class: "form-control" %>
-  <%= select_tag :location,  options_for_select(Animal.all.pluck(:location)),
-  class: "form-control" %>
+<div class="form-group mr-3 form-label">
+  <%= label_tag 'Type:' %>
+  <%= select_tag :animal_type, options_for_select(Animal::TYPES), prompt: "Type", options: {value:  params[:animal_type]},
+  class: "form-control search-bar" %>
+</div>
+<div class="form-group mr-3 form-label">
+  <%= label_tag 'Size:' %>
+  <%= select_tag :size,  options_for_select(Animal::SIZES),prompt: "Size",
+  class: "form-control search-bar" %>
+</div>
+<div class="form-group mr-3 form-label">
+  <%= label_tag 'Energy Level:'%>
+  <%= select_tag :energy,  options_for_select(Animal::ENERGY), prompt: "Energy Level",
+  class: "form-control search-bar" %>
+</div>
+<div class="form-group form-label">
+  <%= label_tag 'Animal Location:' %>
 
+  <%= select_tag :location,  options_for_select(Animal.all.pluck(:location)), prompt: "Location",
+  class: "form-control search-bar" %>
+</div>
 
  <%= submit_tag value="🔍", class: "submit-button"%>
 <% end %>
