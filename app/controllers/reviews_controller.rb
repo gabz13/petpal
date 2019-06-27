@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @review.animal = @animal
     @review.user = current_user
     authorize @review
-    if @review.save!
+    if @review.save
       redirect_to animal_path(@animal)
     else
        render :create
