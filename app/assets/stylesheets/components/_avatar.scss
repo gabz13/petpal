@@ -18,3 +18,31 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+
+
+#rating-star {
+  color: #F6EBAA;
+  border: #EDD755;
+}
+
+
+.review-scroll {
+  overflow: scroll;
+}
+
+
+#reviews {
+
+  // flex-grow: 3;
+}
+.review-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 70%;
+  margin-left: 200px;
+
+}
+.rating-form {
+
+}
