@@ -42,13 +42,16 @@
        </div>
      </div>
    </div>
-   <div class="d-flex justify-content-around align-center offset-2 review-container">
+   <div class="review-container d-flex justify-content-around">
      <div id="reviews">
       <% if @animal.reviews.blank? %>
       Be the first to leave a review for <%= @animal.name %>
       <% else %>
+      <h2 id="review-header">Reviews:</h2>
+      <br>
       <div class="review-scroll">
-      <h2>Reviews:</h2>
+
+
       <% @animal.reviews.each do |review| %>
       <% review.rating.times do %>
       <i class="fas fa-star" id="rating-star"></i>
@@ -61,8 +64,10 @@
       </div>
       <div class="rating-form">
         <%= simple_form_for([ @animal, @review ]) do |form| %>
-        <%= form.input :rating, collection: (1..5).to_a, as: :select %>
-        <%= form.input :content, as: :text %>
+          <br>
+        <%= form.input :rating, collection: (1..5).to_a, as: :select, label: 'Rate your Pal:' %>
+        <br>
+        <%= form.input :content, as: :text, class: "content-review", label: 'Tell us about your experience:' %>
         <%= form.button :submit, class: "btn btn-info btn-md btn-block" %>
         <% end %>
       </div>
