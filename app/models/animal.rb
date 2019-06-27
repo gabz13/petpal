@@ -16,10 +16,10 @@ class Animal < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :photo, presence: true
+  validates :location, presence: true
 
 
   has_many :reviews, dependent: :destroy
 
-  validates :location, presence: true
 
 end
