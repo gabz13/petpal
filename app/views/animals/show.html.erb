@@ -10,9 +10,9 @@
         <div class="animal-info">
           <ul class="animal-list"><strong>Get to know me:</strong></ul>
           <p class="animal-desc"><%= @animal.description %></p>
-          <p><strong>Type of Animal: </strong><%= @animal.animal_type %></p>
-          <p><strong>Size of Animal: </strong><%= @animal.size %></p>
-          <p><strong>Craziness level: </strong><%= @animal.energy %></p>
+          <p><strong>Type: </strong><%= @animal.animal_type %></p>
+          <p><strong>Size: </strong><%= @animal.size %></p>
+          <p><strong>Craziness: </strong><%= @animal.energy %></p>
           <div class="d-flex justify-content-start ml-2">
             <div class="p-2">
               <% if policy(@animal).edit? %>
