@@ -3,6 +3,22 @@
 
 
 <div class="container-index">
+  <div class="search-form d-flex justify-content-around mr-2">
+  <%= form_tag animals_path, method: :get, class: "form-inline" do %>
+
+  <%= select_tag :animal_type, options_for_select(Animal::TYPES), options: {value:  params[:animal_type]},
+  class: "form-control" %>
+  <%= select_tag :size,  options_for_select(Animal::SIZES),
+  class: "form-control" %>
+  <%= select_tag :energy,  options_for_select(Animal::ENERGY),
+  class: "form-control" %>
+  <%= select_tag :location,  options_for_select(Animal.all.pluck(:location)),
+  class: "form-control" %>
+
+
+ <%= submit_tag value="🔍", class: "submit-button"%>
+<% end %>
+</div>
 <%# link_to "Add a Pal", new_animal_path, class: "btn btn-info btn-md my-3 ml-2"  %>
   <div class="row mt-5 mb-5" id="card">
     <!-- <div class="d-flex justify-content-between"> -->

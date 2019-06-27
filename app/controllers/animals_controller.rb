@@ -2,14 +2,26 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :destroy, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @animals = policy_scope(Animal).order(created_at: :asc).where.not(latitude: nil, longitude: nil)
+
+    if params[:animal_type] && params[:size] && params[:energy] && params[:location]
+      # sql_query = " \
+      #   animals.animal_type @@ :animal_type \
+      #   OR animals.location @@ :location \
+      #   OR animals.energy @@ :energy \
+      #   OR animals.size @@ :size \
+      #   "
+      @animals = policy_scope(Animal).where(animal_type: "#{params[:animal_type]}", size: "#{params[:size]}", energy: "#{params[:energy]}", location: "#{params[:location]}")
+
+    else
+      @animals = policy_scope(Animal).order(created_at: :asc).where.not(latitude: nil, longitude: nil)
+    end
 
     @markers = @animals.map do |animal|
       {
         lat: animal.latitude,
         lng: animal.longitude,
         infoWindow: render_to_string(partial: "infocard", locals: { animal: animal }),
-        image_url: helpers.asset_url('paw.jpg')
+        image_url: helpers.asset_url('paw-solid.svg')
       }
     end
   end
